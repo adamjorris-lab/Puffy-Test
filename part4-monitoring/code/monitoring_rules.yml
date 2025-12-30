@@ -1,0 +1,50 @@
+schemas:
+  sessions_required:
+  - session_id
+  - session_start
+  - device_type
+  - marketing_source
+  orders_required:
+  - transaction_id
+  - order_ts
+  - revenue
+  - device_type
+  - marketing_source
+  attrib_required:
+  - transaction_id
+  - model
+  - attributed_source
+  - attributed_session_id
+  sessions_date_col: session_start
+  orders_date_col: order_ts
+  attrib_date_col: null
+hard_rules:
+  max_duplicate_transactions: 0
+  max_zero_revenue_orders: 5
+  max_null_rate:
+    client_id: 0.05
+    marketing_source: 0.1
+anomaly_detection:
+  baseline_days: 7
+  z_score_threshold: 3.0
+  pct_change_threshold: 0.3
+  top_channels_to_monitor: 6
+  channel_share_abs_change_threshold: 0.15
+freshness:
+  expected_lag_days: 1
+  allowed_missing_days: 0
+  min_sessions_per_day: 1000
+  min_orders_per_day: 5
+operations:
+  quarantine_on_error: true
+  quarantine_target_dir: quarantine
+  warehouse_copy_on_quarantine: true
+alert_routing:
+  error_channels:
+  - pagerduty://puffy-analytics
+  - slack://#data-alerts
+  warn_channels:
+  - slack://#data-warnings
+  info_channels:
+  - slack://#data-observability
+  emit_console_notifications: true

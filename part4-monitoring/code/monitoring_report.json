@@ -1,0 +1,201 @@
+{
+  "generated_utc": "2025-12-30",
+  "expected_partition_date": "2025-03-08",
+  "counts": {
+    "ERROR": 2,
+    "WARN": 12,
+    "INFO": 0
+  },
+  "routing": {
+    "counts": {
+      "ERROR": 2,
+      "WARN": 12,
+      "INFO": 0
+    },
+    "routing_plan": {
+      "ERROR": [
+        "pagerduty://puffy-analytics",
+        "slack://#data-alerts"
+      ],
+      "WARN": [
+        "slack://#data-warnings"
+      ],
+      "INFO": [
+        "slack://#data-observability"
+      ]
+    }
+  },
+  "findings": [
+    {
+      "severity": "ERROR",
+      "check": "anomaly:conversion_rate",
+      "partition_date": "2025-03-01",
+      "message": "conversion_rate anomalous vs baseline mean=0.01 std=0.00: curr=0.01 z=3.12 pct_change=43.49%",
+      "value": 0.00966010733452594,
+      "threshold": 3.0,
+      "context": {
+        "baseline_mean": 0.006732433154783728,
+        "baseline_std": 0.0009371025934780139,
+        "z": 3.1241767978426793,
+        "pct_change": 0.4348612325488822
+      }
+    },
+    {
+      "severity": "ERROR",
+      "check": "anomaly:revenue",
+      "partition_date": "2025-03-01",
+      "message": "revenue anomalous vs baseline mean=18351.10 std=3863.39: curr=30585.00 z=3.17 pct_change=66.67%",
+      "value": 30585.0,
+      "threshold": 3.0,
+      "context": {
+        "baseline_mean": 18351.100000000002,
+        "baseline_std": 3863.3911161914043,
+        "z": 3.1666221803761823,
+        "pct_change": 0.6666575845589636
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "anomaly:aov",
+      "partition_date": "2025-03-02",
+      "message": "aov anomalous vs baseline mean=972.05 std=98.21: curr=1282.77 z=3.16 pct_change=31.97%",
+      "value": 1282.7727272727273,
+      "threshold": 3.0,
+      "context": {
+        "baseline_mean": 972.0541026329558,
+        "baseline_std": 98.2136453256735,
+        "z": 3.1637011701320907,
+        "pct_change": 0.3196515747406887
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "anomaly:channel_share",
+      "partition_date": "2025-02-28",
+      "message": "Channel 'direct' share shifted: curr=65.5% vs baseline=47.3%",
+      "value": 0.6551502490760084,
+      "threshold": 0.15,
+      "context": {
+        "channel": "direct",
+        "baseline_share": 0.4725907298422244
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "anomaly:channel_share",
+      "partition_date": "2025-02-28",
+      "message": "Channel 'google_ads' share shifted: curr=13.1% vs baseline=28.7%",
+      "value": 0.13107290160158552,
+      "threshold": 0.15,
+      "context": {
+        "channel": "google_ads",
+        "baseline_share": 0.28722505475077575
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "anomaly:channel_share",
+      "partition_date": "2025-03-02",
+      "message": "Channel 'direct' share shifted: curr=27.2% vs baseline=49.8%",
+      "value": 0.2719960313241912,
+      "threshold": 0.15,
+      "context": {
+        "channel": "direct",
+        "baseline_share": 0.4975861544132832
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "anomaly:channel_share",
+      "partition_date": "2025-03-03",
+      "message": "Channel 'direct' share shifted: curr=22.5% vs baseline=46.4%",
+      "value": 0.2251180211462682,
+      "threshold": 0.15,
+      "context": {
+        "channel": "direct",
+        "baseline_share": 0.4637331486400857
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "anomaly:channel_share",
+      "partition_date": "2025-03-03",
+      "message": "Channel 'microsoft_ads' share shifted: curr=36.0% vs baseline=6.2%",
+      "value": 0.35957434356833523,
+      "threshold": 0.15,
+      "context": {
+        "channel": "microsoft_ads",
+        "baseline_share": 0.061862199795508194
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "anomaly:channel_share",
+      "partition_date": "2025-03-03",
+      "message": "Channel 'other_referrer' share shifted: curr=26.8% vs baseline=7.8%",
+      "value": 0.26798603253872266,
+      "threshold": 0.15,
+      "context": {
+        "channel": "other_referrer",
+        "baseline_share": 0.07847200864678498
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "anomaly:channel_share",
+      "partition_date": "2025-03-04",
+      "message": "Channel 'direct' share shifted: curr=69.5% vs baseline=39.8%",
+      "value": 0.6951268626661297,
+      "threshold": 0.15,
+      "context": {
+        "channel": "direct",
+        "baseline_share": 0.39804950510917964
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "anomaly:channel_share",
+      "partition_date": "2025-03-07",
+      "message": "Channel 'direct' share shifted: curr=67.3% vs baseline=47.4%",
+      "value": 0.672576509737603,
+      "threshold": 0.15,
+      "context": {
+        "channel": "direct",
+        "baseline_share": 0.4739921963218802
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "anomaly:channel_share",
+      "partition_date": "2025-03-07",
+      "message": "Channel 'google_ads' share shifted: curr=1.7% vs baseline=20.7%",
+      "value": 0.01674758605640718,
+      "threshold": 0.15,
+      "context": {
+        "channel": "google_ads",
+        "baseline_share": 0.2070682572487406
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "anomaly:channel_share",
+      "partition_date": "2025-03-08",
+      "message": "Channel 'utm_tagged' share shifted: curr=24.0% vs baseline=8.6%",
+      "value": 0.24041948874808827,
+      "threshold": 0.15,
+      "context": {
+        "channel": "utm_tagged",
+        "baseline_share": 0.0858066274500491
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "orders:zero_revenue_orders",
+      "partition_date": null,
+      "message": "Zero revenue orders: 10",
+      "value": 10.0,
+      "threshold": 5.0,
+      "context": null
+    }
+  ]
+}
