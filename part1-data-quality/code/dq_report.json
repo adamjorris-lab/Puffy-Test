@@ -1,0 +1,559 @@
+{
+  "findings": [
+    {
+      "severity": "WARN",
+      "check": "purchase.revenue_non_positive",
+      "message": "1 purchase rows have revenue <= 0.",
+      "sample": {
+        "transaction_ids": [
+          "ORD-20250224-227"
+        ],
+        "partition": "20250224",
+        "source_file": "events_20250224.csv"
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "purchase.revenue_non_integer",
+      "message": "1 purchase rows have non-integer revenue values (possible cents/dollars mismatch).",
+      "sample": {
+        "transaction_ids": [
+          "ORD-20250224-382"
+        ],
+        "partition": "20250224",
+        "source_file": "events_20250224.csv"
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "purchase.revenue_non_positive",
+      "message": "1 purchase rows have revenue <= 0.",
+      "sample": {
+        "transaction_ids": [
+          "ORD-20250225-246"
+        ],
+        "partition": "20250225",
+        "source_file": "events_20250225.csv"
+      }
+    },
+    {
+      "severity": "ERROR",
+      "check": "purchase.duplicate_transaction_id",
+      "message": "Found 2 purchase rows with duplicate transaction_id (will inflate revenue if summed).",
+      "sample": {
+        "examples": [
+          {
+            "timestamp": "2025-02-26T19:51:13.069Z",
+            "source_file": "events_20250226.csv"
+          },
+          {
+            "timestamp": "2025-02-26T22:58:36.874Z",
+            "source_file": "events_20250226.csv"
+          }
+        ],
+        "partition": "20250226",
+        "source_file": "events_20250226.csv"
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "schema.drift.client_id_alias",
+      "message": "Client ID column drift detected. Present: ['clientId']. Canonical expected: client_id.",
+      "sample": {
+        "partition": "20250227",
+        "source_file": "events_20250227.csv"
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "purchase.revenue_non_positive",
+      "message": "1 purchase rows have revenue <= 0.",
+      "sample": {
+        "transaction_ids": [
+          "ORD-20250227-314"
+        ],
+        "partition": "20250227",
+        "source_file": "events_20250227.csv"
+      }
+    },
+    {
+      "severity": "ERROR",
+      "check": "purchase.duplicate_transaction_id",
+      "message": "Found 2 purchase rows with duplicate transaction_id (will inflate revenue if summed).",
+      "sample": {
+        "examples": [
+          {
+            "timestamp": "2025-02-27T01:36:32.342Z",
+            "source_file": "events_20250227.csv"
+          },
+          {
+            "timestamp": "2025-02-27T22:11:28.480Z",
+            "source_file": "events_20250227.csv"
+          }
+        ],
+        "partition": "20250227",
+        "source_file": "events_20250227.csv"
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "schema.drift.client_id_alias",
+      "message": "Client ID column drift detected. Present: ['clientId']. Canonical expected: client_id.",
+      "sample": {
+        "partition": "20250228",
+        "source_file": "events_20250228.csv"
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "purchase.revenue_non_positive",
+      "message": "1 purchase rows have revenue <= 0.",
+      "sample": {
+        "transaction_ids": [
+          "ORD-20250228-318"
+        ],
+        "partition": "20250228",
+        "source_file": "events_20250228.csv"
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "schema.drift.client_id_alias",
+      "message": "Client ID column drift detected. Present: ['clientId']. Canonical expected: client_id.",
+      "sample": {
+        "partition": "20250301",
+        "source_file": "events_20250301.csv"
+      }
+    },
+    {
+      "severity": "ERROR",
+      "check": "purchase.duplicate_transaction_id",
+      "message": "Found 2 purchase rows with duplicate transaction_id (will inflate revenue if summed).",
+      "sample": {
+        "examples": [
+          {
+            "timestamp": "2025-03-01T15:43:14.036Z",
+            "source_file": "events_20250301.csv"
+          },
+          {
+            "timestamp": "2025-03-01T22:55:01.346Z",
+            "source_file": "events_20250301.csv"
+          }
+        ],
+        "partition": "20250301",
+        "source_file": "events_20250301.csv"
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "schema.drift.client_id_alias",
+      "message": "Client ID column drift detected. Present: ['clientId']. Canonical expected: client_id.",
+      "sample": {
+        "partition": "20250302",
+        "source_file": "events_20250302.csv"
+      }
+    },
+    {
+      "severity": "ERROR",
+      "check": "nulls.client_id_canonical",
+      "message": "High null rate for client_id_canonical: 15.8%",
+      "sample": {
+        "partition": "20250302",
+        "source_file": "events_20250302.csv"
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "schema.drift.client_id_alias",
+      "message": "Client ID column drift detected. Present: ['clientId']. Canonical expected: client_id.",
+      "sample": {
+        "partition": "20250303",
+        "source_file": "events_20250303.csv"
+      }
+    },
+    {
+      "severity": "ERROR",
+      "check": "nulls.client_id_canonical",
+      "message": "High null rate for client_id_canonical: 8.7%",
+      "sample": {
+        "partition": "20250303",
+        "source_file": "events_20250303.csv"
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "purchase.revenue_non_positive",
+      "message": "2 purchase rows have revenue <= 0.",
+      "sample": {
+        "transaction_ids": [
+          "ORD-20250303-390",
+          "ORD-20250303-169"
+        ],
+        "partition": "20250303",
+        "source_file": "events_20250303.csv"
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "purchase.revenue_non_integer",
+      "message": "1 purchase rows have non-integer revenue values (possible cents/dollars mismatch).",
+      "sample": {
+        "transaction_ids": [
+          "ORD-20250303-171"
+        ],
+        "partition": "20250303",
+        "source_file": "events_20250303.csv"
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "schema.drift.client_id_alias",
+      "message": "Client ID column drift detected. Present: ['clientId']. Canonical expected: client_id.",
+      "sample": {
+        "partition": "20250304",
+        "source_file": "events_20250304.csv"
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "schema.missing_referrer",
+      "message": "referrer column missing (will break/limit attribution).",
+      "sample": {
+        "partition": "20250304",
+        "source_file": "events_20250304.csv"
+      }
+    },
+    {
+      "severity": "ERROR",
+      "check": "nulls.client_id_canonical",
+      "message": "High null rate for client_id_canonical: 8.5%",
+      "sample": {
+        "partition": "20250304",
+        "source_file": "events_20250304.csv"
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "purchase.revenue_non_positive",
+      "message": "2 purchase rows have revenue <= 0.",
+      "sample": {
+        "transaction_ids": [
+          "ORD-20250304-605",
+          "ORD-20250304-556"
+        ],
+        "partition": "20250304",
+        "source_file": "events_20250304.csv"
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "schema.drift.client_id_alias",
+      "message": "Client ID column drift detected. Present: ['clientId']. Canonical expected: client_id.",
+      "sample": {
+        "partition": "20250305",
+        "source_file": "events_20250305.csv"
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "schema.missing_referrer",
+      "message": "referrer column missing (will break/limit attribution).",
+      "sample": {
+        "partition": "20250305",
+        "source_file": "events_20250305.csv"
+      }
+    },
+    {
+      "severity": "ERROR",
+      "check": "nulls.client_id_canonical",
+      "message": "High null rate for client_id_canonical: 7.9%",
+      "sample": {
+        "partition": "20250305",
+        "source_file": "events_20250305.csv"
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "schema.drift.client_id_alias",
+      "message": "Client ID column drift detected. Present: ['clientId']. Canonical expected: client_id.",
+      "sample": {
+        "partition": "20250306",
+        "source_file": "events_20250306.csv"
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "schema.missing_referrer",
+      "message": "referrer column missing (will break/limit attribution).",
+      "sample": {
+        "partition": "20250306",
+        "source_file": "events_20250306.csv"
+      }
+    },
+    {
+      "severity": "ERROR",
+      "check": "nulls.client_id_canonical",
+      "message": "High null rate for client_id_canonical: 8.3%",
+      "sample": {
+        "partition": "20250306",
+        "source_file": "events_20250306.csv"
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "purchase.revenue_non_positive",
+      "message": "2 purchase rows have revenue <= 0.",
+      "sample": {
+        "transaction_ids": [
+          "ORD-20250306-263",
+          "ORD-20250306-685"
+        ],
+        "partition": "20250306",
+        "source_file": "events_20250306.csv"
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "schema.drift.client_id_alias",
+      "message": "Client ID column drift detected. Present: ['clientId']. Canonical expected: client_id.",
+      "sample": {
+        "partition": "20250307",
+        "source_file": "events_20250307.csv"
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "schema.missing_referrer",
+      "message": "referrer column missing (will break/limit attribution).",
+      "sample": {
+        "partition": "20250307",
+        "source_file": "events_20250307.csv"
+      }
+    },
+    {
+      "severity": "ERROR",
+      "check": "nulls.client_id_canonical",
+      "message": "High null rate for client_id_canonical: 8.3%",
+      "sample": {
+        "partition": "20250307",
+        "source_file": "events_20250307.csv"
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "schema.drift.client_id_alias",
+      "message": "Client ID column drift detected. Present: ['clientId']. Canonical expected: client_id.",
+      "sample": {
+        "partition": "20250308",
+        "source_file": "events_20250308.csv"
+      }
+    },
+    {
+      "severity": "WARN",
+      "check": "schema.missing_referrer",
+      "message": "referrer column missing (will break/limit attribution).",
+      "sample": {
+        "partition": "20250308",
+        "source_file": "events_20250308.csv"
+      }
+    },
+    {
+      "severity": "ERROR",
+      "check": "nulls.client_id_canonical",
+      "message": "High null rate for client_id_canonical: 14.3%",
+      "sample": {
+        "partition": "20250308",
+        "source_file": "events_20250308.csv"
+      }
+    },
+    {
+      "severity": "ERROR",
+      "check": "purchase.duplicate_transaction_id",
+      "message": "Found 2 purchase rows with duplicate transaction_id (will inflate revenue if summed).",
+      "sample": {
+        "examples": [
+          {
+            "timestamp": "2025-03-08T03:58:02.192Z",
+            "source_file": "events_20250308.csv"
+          },
+          {
+            "timestamp": "2025-03-08T16:34:14.414Z",
+            "source_file": "events_20250308.csv"
+          }
+        ],
+        "partition": "20250308",
+        "source_file": "events_20250308.csv"
+      }
+    }
+  ],
+  "metrics": [
+    {
+      "partition": "20250223",
+      "source_file": "events_20250223.csv",
+      "rows": 4070,
+      "null_rate.client_id_canonical": 0.005405405405405406,
+      "bad_timestamp_format": 0,
+      "invalid_event_name": 0,
+      "bad_event_data_json": 0,
+      "purchases": 21,
+      "duplicate_transaction_ids": 0,
+      "null_rate.referrer": 0.7297297297297297
+    },
+    {
+      "partition": "20250224",
+      "source_file": "events_20250224.csv",
+      "rows": 3769,
+      "null_rate.client_id_canonical": 0.014592730167153092,
+      "bad_timestamp_format": 0,
+      "invalid_event_name": 0,
+      "bad_event_data_json": 0,
+      "purchases": 26,
+      "duplicate_transaction_ids": 0,
+      "null_rate.referrer": 0.7715574422923852
+    },
+    {
+      "partition": "20250225",
+      "source_file": "events_20250225.csv",
+      "rows": 3470,
+      "null_rate.client_id_canonical": 0.009798270893371758,
+      "bad_timestamp_format": 0,
+      "invalid_event_name": 0,
+      "bad_event_data_json": 0,
+      "purchases": 16,
+      "duplicate_transaction_ids": 0,
+      "null_rate.referrer": 0.7495677233429395
+    },
+    {
+      "partition": "20250226",
+      "source_file": "events_20250226.csv",
+      "rows": 3177,
+      "null_rate.client_id_canonical": 0.01447906830343091,
+      "bad_timestamp_format": 0,
+      "invalid_event_name": 0,
+      "bad_event_data_json": 0,
+      "purchases": 15,
+      "duplicate_transaction_ids": 2,
+      "null_rate.referrer": 0.7069562480327353
+    },
+    {
+      "partition": "20250227",
+      "source_file": "events_20250227.csv",
+      "rows": 3393,
+      "null_rate.client_id_canonical": 0.010020630710285883,
+      "bad_timestamp_format": 0,
+      "invalid_event_name": 0,
+      "bad_event_data_json": 0,
+      "purchases": 21,
+      "duplicate_transaction_ids": 2,
+      "null_rate.referrer": 0.712938402593575
+    },
+    {
+      "partition": "20250228",
+      "source_file": "events_20250228.csv",
+      "rows": 3263,
+      "null_rate.client_id_canonical": 0.00827459393196445,
+      "bad_timestamp_format": 0,
+      "invalid_event_name": 0,
+      "bad_event_data_json": 0,
+      "purchases": 19,
+      "duplicate_transaction_ids": 0,
+      "null_rate.referrer": 0.5966901624272142
+    },
+    {
+      "partition": "20250301",
+      "source_file": "events_20250301.csv",
+      "rows": 3489,
+      "null_rate.client_id_canonical": 0.006592146746918888,
+      "bad_timestamp_format": 0,
+      "invalid_event_name": 0,
+      "bad_event_data_json": 0,
+      "purchases": 29,
+      "duplicate_transaction_ids": 2,
+      "null_rate.referrer": 0.36285468615649186
+    },
+    {
+      "partition": "20250302",
+      "source_file": "events_20250302.csv",
+      "rows": 4335,
+      "null_rate.client_id_canonical": 0.1580161476355248,
+      "bad_timestamp_format": 0,
+      "invalid_event_name": 0,
+      "bad_event_data_json": 0,
+      "purchases": 22,
+      "duplicate_transaction_ids": 0,
+      "null_rate.referrer": 0.46782006920415226
+    },
+    {
+      "partition": "20250303",
+      "source_file": "events_20250303.csv",
+      "rows": 4042,
+      "null_rate.client_id_canonical": 0.08683819891142998,
+      "bad_timestamp_format": 0,
+      "invalid_event_name": 0,
+      "bad_event_data_json": 0,
+      "purchases": 24,
+      "duplicate_transaction_ids": 0,
+      "null_rate.referrer": 0.45150915388421575
+    },
+    {
+      "partition": "20250304",
+      "source_file": "events_20250304.csv",
+      "rows": 3538,
+      "null_rate.client_id_canonical": 0.0847936687394008,
+      "bad_timestamp_format": 0,
+      "invalid_event_name": 0,
+      "bad_event_data_json": 0,
+      "purchases": 20,
+      "duplicate_transaction_ids": 0,
+      "null_rate.referrer": NaN
+    },
+    {
+      "partition": "20250305",
+      "source_file": "events_20250305.csv",
+      "rows": 2881,
+      "null_rate.client_id_canonical": 0.07913918778202013,
+      "bad_timestamp_format": 0,
+      "invalid_event_name": 0,
+      "bad_event_data_json": 0,
+      "purchases": 20,
+      "duplicate_transaction_ids": 0,
+      "null_rate.referrer": NaN
+    },
+    {
+      "partition": "20250306",
+      "source_file": "events_20250306.csv",
+      "rows": 3442,
+      "null_rate.client_id_canonical": 0.08280069726902964,
+      "bad_timestamp_format": 0,
+      "invalid_event_name": 0,
+      "bad_event_data_json": 0,
+      "purchases": 23,
+      "duplicate_transaction_ids": 0,
+      "null_rate.referrer": NaN
+    },
+    {
+      "partition": "20250307",
+      "source_file": "events_20250307.csv",
+      "rows": 3251,
+      "null_rate.client_id_canonical": 0.08305136880959704,
+      "bad_timestamp_format": 0,
+      "invalid_event_name": 0,
+      "bad_event_data_json": 0,
+      "purchases": 16,
+      "duplicate_transaction_ids": 0,
+      "null_rate.referrer": NaN
+    },
+    {
+      "partition": "20250308",
+      "source_file": "events_20250308.csv",
+      "rows": 3843,
+      "null_rate.client_id_canonical": 0.1425969294821754,
+      "bad_timestamp_format": 0,
+      "invalid_event_name": 0,
+      "bad_event_data_json": 0,
+      "purchases": 22,
+      "duplicate_transaction_ids": 2,
+      "null_rate.referrer": NaN
+    }
+  ]
+}

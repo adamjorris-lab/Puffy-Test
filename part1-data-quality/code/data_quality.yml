@@ -1,0 +1,21 @@
+name: data-quality
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  dq:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r dq_framework/requirements.txt
+      - name: Run validation
+        run: |
+          python dq_framework/run_validation.py --input_dir data/raw --output_dir reports --rules config/dq_rules.yml --fail_on_error

@@ -1,0 +1,35 @@
+version: 1
+thresholds:
+  max_null_rate:
+    client_id: 0.05
+    timestamp: 0.0001
+    event_name: 0.0001
+  max_schema_drift_cols_missing: 0
+  max_duplicate_txn_id_rate: 0.001
+  max_zero_revenue_rate: 0.001
+  max_negative_revenue_rate: 0.0
+required_columns:
+- client_id
+- page_url
+- timestamp
+- event_name
+- event_data
+- user_agent
+optional_columns:
+- referrer
+canonical_column_map:
+  clientId: client_id
+event_rules:
+  purchase_event_names:
+  - purchase
+  - checkout_completed
+  - order_completed
+  revenue_fields:
+  - revenue
+  - value
+  - total
+  - order_total
+  transaction_id_fields:
+  - transaction_id
+  - order_id
+  - txn_id
